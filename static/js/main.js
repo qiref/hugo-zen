@@ -302,7 +302,7 @@
     let depth = 0;
     let el = link.parentElement;
     while (el && el.id !== 'TableOfContents') {
-      if (el.tagName === 'UL') depth++;
+      if (el.tagName === 'UL' || el.tagName === 'OL') depth++;
       el = el.parentElement;
     }
     const level = Math.min(Math.max(depth, 1), 3);

@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "css/chroma.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/hugo-zen.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/heatmap.css" | relURL }}" />
     {{- $gaID := .Site.Config.Services.GoogleAnalytics.ID -}}
     {{- if $gaID }}
