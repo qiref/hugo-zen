@@ -1,0 +1,11 @@
+  <footer>
+  {{ partial "comments.html" . }}
+  <script src="{{ "js/main.js" | relURL }}" defer></script>
+  {{ partial "foot_custom.html" . }}
+  {{ with .Site.Params.footer }}
+  <hr/>
+  {{ replace . "{Year}" now.Year | markdownify }}
+  {{ end }}
+  </footer>
+  </body>
+</html>

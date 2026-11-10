@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+{{ $pages := where site.RegularPages "Type" "==" "post" }}
+{{ $limit := default 25 .Site.Params.homePostLimit }}
+
+<ul class="post-list">
+  {{ range first $limit $pages.ByDate.Reverse }}
+  <li class="{{ .Type }}-item">
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+{{ if ne .Site.Params.enableHeatmap false }}
+<!-- 博客文章热力图 -->
+{{ partial "heatmap.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

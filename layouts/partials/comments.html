@@ -1,0 +1,11 @@
+{{- $utterances := .Site.Params.utterances -}}
+{{- if and (eq .Section "post") $utterances.repo }}
+<script src="https://utteranc.es/client.js"
+        repo="{{ $utterances.repo }}"
+        issue-term="{{ default "pathname" $utterances.issueTerm }}"
+        label="{{ default "Comment" $utterances.label }}"
+        theme="{{ default "github-light" $utterances.theme }}"
+        crossorigin="anonymous"
+        async>
+</script>
+{{- end }}
