@@ -5,6 +5,8 @@
 
 **Hugo Zen** is a fast, clean, and minimalist Hugo theme designed for technical blogs, architecture essays, and personal notes. Inspired by [hugo-xmin](https://github.com/yihui/hugo-xmin) and GitHub Primer Light, it delivers modern reading ergonomics—instant `⌘K` search, a floating scroll-spy table of contents, a 5-year post contribution heatmap, and zero-JS compile-time syntax highlighting—without heavy frontend frameworks.
 
+![Hugo Zen Screenshot](https://raw.githubusercontent.com/qiref/hugo-zen/master/images/screenshot.png)
+
 ---
 
 ## ✨ Features
