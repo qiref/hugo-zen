@@ -3,16 +3,15 @@ license = "MIT"
 licenselink = "https://github.com/qiref/hugo-zen/blob/master/LICENSE.md"
 description = "A clean, minimalist Hugo theme with Cmd+K instant search, floating TOC, contribution heatmap, and Atom One Light syntax highlighting."
 homepage = "https://github.com/qiref/hugo-zen"
-demosite = "https://qiref.github.io"
-tags = ["minimal", "blog", "personal", "clean", "simple", "minimalist", "search", "toc", "heatmap"]
+tags = ["minimal", "blog", "personal", "light", "clean", "simple", "minimalist", "search", "toc", "heatmap"]
 features = ["blog", "search", "toc", "heatmap", "utterances"]
 min_version = "0.100.0"
 
 [author]
   name = "qiref"
-  homepage = "https://qiref.github.io"
+  homepage = "https://github.com/qiref"
 
 [original]
-  name = "XMin"
+  author = "Yihui Xie"
   homepage = "https://xmin.yihui.org"
   repo = "https://github.com/yihui/hugo-xmin"
