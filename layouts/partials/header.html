@@ -43,7 +43,7 @@
     </nav>
 
     {{ if ne .Site.Params.enableSearch false }}
-    <div id="search-modal" class="search-modal" aria-hidden="true">
+    <div id="search-modal" class="search-modal" aria-hidden="true" data-search-index="{{ "index.json" | relURL }}">
       <div class="search-backdrop" id="search-backdrop"></div>
       <div class="search-dialog" role="dialog" aria-modal="true" aria-label="站内搜索">
         <div class="search-header">

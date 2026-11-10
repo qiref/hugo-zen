@@ -28,7 +28,8 @@
   async function loadSearchIndex() {
     if (searchIndex) return searchIndex;
     try {
-      const response = await fetch('/index.json');
+      const indexUrl = modal.dataset.searchIndex || '/index.json';
+      const response = await fetch(indexUrl);
       const data = await response.json();
       searchIndex = (data.pages || []).map(p => ({
         ...p,
