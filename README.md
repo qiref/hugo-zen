@@ -5,8 +5,6 @@
 
 **Hugo Zen** is a fast, clean, and minimalist Hugo theme designed for technical blogs, architecture essays, and personal notes. Inspired by [hugo-xmin](https://github.com/yihui/hugo-xmin) and GitHub Primer Light, it delivers modern reading ergonomics—instant `⌘K` search, a floating scroll-spy table of contents, a 5-year post contribution heatmap, and zero-JS compile-time syntax highlighting—without heavy frontend frameworks.
 
-[**Live Demo**](https://qiref.github.io) · [**中文文档**](#-中文文档)
-
 ---
 
 ## ✨ Features
@@ -177,42 +175,6 @@ toc: true # Set to false to hide the floating TOC sidebar on a specific post
 
 - `layouts/partials/head_custom.html`: Injected right before `</head>`.
 - `layouts/partials/foot_custom.html`: Injected inside `<footer>` before `</body>`.
-
----
-
-## 📖 中文文档
-
-**Hugo Zen** 是一款极简、克制、高性能的 Hugo 博客主题，基于 [hugo-xmin](https://github.com/yihui/hugo-xmin) 深度演进而来，专为长篇技术博客、源码解析与日常笔记打造。
-
-### 核心特性
-
-1. **`⌘K` 全文搜索弹窗**：基于编译期生成的 `/index.json`，支持 `⌘K`（macOS）/ `Ctrl+K`（Windows/Linux）或 `/` 键快速唤出，支持多关键词匹配高亮与键盘上下键导航。
-2. **极简右侧悬浮目录（TOC）**：默认在正文右侧显示极简短横线指示器（随标题层级呈现不同长度），鼠标悬停时展开毛玻璃目录卡片，并随页面滚动自动高亮当前章节。
-3. **五年发文贡献热力图**：首页底部自动统计近 5 年每月的发文频次，生成仿 GitHub 风格的绿色渐变热力图。
-4. **Atom One Light 编译期代码高亮**：直接利用 Hugo 内置的 Chroma 词法分析器在编译期生成静态高亮 HTML，无需加载任何前端 `highlight.js` 脚本，首屏零闪烁。
-5. **双内容分区（`post` 与 `note`）**：支持将正式长文放在 `content/post/`（展示在首页与热力图中），将日常随手记放在 `content/note/`（独立归档在 Note 栏目）。
-
-### 快速安装
-
-在你的 Hugo 博客根目录下执行：
-
-```bash
-git submodule add https://github.com/qiref/hugo-zen.git themes/hugo-zen
-```
-
-然后在 `config.yaml` 中设置 `theme: "hugo-zen"`，并确保开启以下两项配置以支持搜索索引与 Chroma 代码高亮：
-
-```yaml
-outputs:
-  home: ["HTML", "RSS", "JSON"]
-
-markup:
-  highlight:
-    codeFences: true
-    noClasses: false
-    guessSyntax: false
-    tabWidth: 4
-```
 
 ---
 
