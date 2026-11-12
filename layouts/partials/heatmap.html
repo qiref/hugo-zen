@@ -11,7 +11,7 @@
 
 <script>
   const blogPosts = [
-    {{ range where site.RegularPages "Type" "==" "post" }}
+    {{ range where site.RegularPages "Type" "in" (slice "post" "note") }}
     { date: "{{ .Date.Format "2006-01-02" }}", title: "{{ .Title }}" },
     {{ end }}
   ];
